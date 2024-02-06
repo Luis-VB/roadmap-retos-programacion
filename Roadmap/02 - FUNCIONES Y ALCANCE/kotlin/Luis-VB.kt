@@ -14,7 +14,9 @@
 */
 
 
-fun countNum(x: String, y:String): () -> Unit {
+
+fun countNum(x: String, y:String): Int {
+    var count = 0
     for (index in 1..100) {
         val divisibleBy3 = index % 3 == 0
         val divisibleBy5 = index % 5 == 0
@@ -26,17 +28,15 @@ fun countNum(x: String, y:String): () -> Unit {
             println("$y")
         } else {
             println(index)
+            count++
         }
-        return {
-            val divisibleBy3 = { string: String -> string.toInt() }
-            val divisibleBy5 = { string: String -> string.toInt() }
-            val count = divisibleBy3 & divisibleBy5
-            println()
-        }
-}
 
+    }
+    return count
+}
 fun main() {
-    countNum("My", "Function")
+    var num = countNum("My", "Function")
+    println("Amount of times printed numbers is $num")
 }
 
 
