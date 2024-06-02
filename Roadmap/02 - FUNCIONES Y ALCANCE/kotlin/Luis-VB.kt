@@ -13,8 +13,6 @@
  * Cada lenguaje sigue una convenciones que debes de respetar para que el código se entienda.
 */
 
-
-
 fun countNum(x: String, y:String): Int {
     var count = 0
     for (index in 1..100) {
